@@ -1,0 +1,19 @@
+.navbar{
+  width: 100%;
+  height: 150px;
+  background-color: rgb(31, 31, 31);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar .logo{
+  width: 130px;
+}
+.categories{
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.categories li{
+  padding: 0 10px;
+}
