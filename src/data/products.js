@@ -4,7 +4,7 @@ const products = [
     name: "Teclado",
     description: "Teclado 60%",
     stock: 5,
-    image: "",
+    image: "/image/k65_mini.avif",
     price: 540
   },
   {

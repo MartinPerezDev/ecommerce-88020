@@ -1,8 +1,14 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Saira", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
-.app{
-  
+body{
+  color: white;
+  background-color: rgb(14, 14, 14);
 }

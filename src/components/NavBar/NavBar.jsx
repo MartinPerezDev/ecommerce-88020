@@ -5,11 +5,12 @@ import "./navbar.css";
 const NavBar = () => {
   return (
     <nav className="navbar">
-      <img src={logo} className="logo" alt="" />
+      <img className="logo" src={logo} alt="" />
+
       <ul className="categories">
-        <li>Auriculares</li>
         <li>Teclados</li>
         <li>Mouse</li>
+        <li>Auriculares</li>
       </ul>
 
       <CartWidget />
