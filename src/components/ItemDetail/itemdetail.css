@@ -1,0 +1,29 @@
+.item-detail{
+  width: 100%;
+  display: flex;
+}
+.item-detail-image-content{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item-detail-image{
+  width: 70%;
+}
+.item-detail-text-content{
+  width: 50%;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.item-detail-text{
+  padding: 50px 0;
+  font-size: 40px;
+  color: rgb(212, 16, 16);
+}
+.item-detail-text-description{
+  font-size: 20px;
+  color: rgb(220, 220, 220);
+}

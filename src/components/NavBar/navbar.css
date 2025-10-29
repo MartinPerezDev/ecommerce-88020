@@ -25,6 +25,10 @@
   padding: 0 20px;
   margin: 0 5px;
 }
+.categories .category{
+  color: rgb(215, 34, 34);
+  text-decoration: none;
+}
 .categories li:hover{
   cursor: pointer;
   border-bottom: 5px solid rgb(181, 15, 15);
