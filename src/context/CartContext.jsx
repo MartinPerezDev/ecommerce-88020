@@ -1,14 +1,28 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
 //creamos nuestro context
 const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState([]);
+  const cartLocalStorage = JSON.parse(localStorage.getItem("cart-ecommerce"));
+  const [cart, setCart] = useState( cartLocalStorage ? cartLocalStorage : [] );
+
+  useEffect(()=> {
+    localStorage.setItem("cart-ecommerce", JSON.stringify(cart));
+  }, [cart])
 
   const addProduct = (newProduct) => {
-    //tarea: evitar duplicados y en el caso de que el producto este en el carrito, entonces sumar cantidades
-    setCart( [ ...cart, newProduct ] );
+    const indexProduct = cart.findIndex((productCart)=> productCart.id === newProduct.id );
+
+    if(indexProduct === -1){
+      //agregar el producto como nuevo
+      setCart( [ ...cart, newProduct ] );
+    }else{
+      //modificar solamente la cantidad del producto
+      const newCart = [...cart];
+      newCart[indexProduct].quantity = newCart[indexProduct].quantity + newProduct.quantity;
+      setCart(newCart);
+    }    
   }
 
   const totalQuantity = () => {

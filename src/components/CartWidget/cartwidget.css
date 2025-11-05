@@ -1,6 +1,7 @@
 .cartwidget{
   display: flex;
   align-items: center;
+  color: rgb(210, 36, 36);
 }
 .cartwidget img{
   width: 50px;
