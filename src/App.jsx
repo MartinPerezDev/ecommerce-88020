@@ -6,6 +6,10 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import { CartProvider } from "./context/CartContext";
 import Cart from "./components/Cart/Cart";
 import Checkout from "./components/Checkout/Checkout";
+import Register from "./components/Register/Register";
+import Login from "./components/Login/Login";
+import { AuthProvider } from "./context/AuthContext";
+import Profile from "./components/Profile/Profile";
 
 import './App.css'
 
@@ -14,18 +18,23 @@ function App() {
   return (
     <div className="app">
       <BrowserRouter>
-        <CartProvider>
-          <NavBar />
+        <AuthProvider>
+          <CartProvider>
+            <NavBar />
 
-          <Routes>
-            <Route path="/" element={<ItemListContainer greeting={"Bienvenidos a mi ecommerce"} />} />
-            <Route path="/category/:category" element={<ItemListContainer greeting={"Bienvenidos a mi ecommerce"} />} />
-            <Route path="/detail/:id" element={<ItemDetailContainer />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/checkout" element={<Checkout />} />
-            <Route path="*" element={<div>Error 404</div>} />
-          </Routes>
-        </CartProvider>
+            <Routes>
+              <Route path="/" element={<ItemListContainer greeting={"Bienvenidos a mi ecommerce"} />} />
+              <Route path="/category/:category" element={<ItemListContainer greeting={"Bienvenidos a mi ecommerce"} />} />
+              <Route path="/detail/:id" element={<ItemDetailContainer />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/checkout" element={<Checkout />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="*" element={<div>Error 404</div>} />
+            </Routes>
+          </CartProvider>
+        </AuthProvider>
       </BrowserRouter>
     </div>
   )

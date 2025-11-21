@@ -20,6 +20,18 @@ const NavBar = () => {
         <li>
           <Link to="/category/auriculares" className="category" >Auriculares</Link>
         </li>
+
+        <li>
+          <Link to="/register" className="category" >Registro</Link>
+        </li>
+
+        <li>
+          <Link to="/login" className="category" >Iniciar sesion</Link>
+        </li>
+
+        <li>
+          <Link to="/profile" className="category" >Mi Perfil</Link>
+        </li>
       </ul>
 
       <CartWidget />

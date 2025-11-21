@@ -1,0 +1,60 @@
+.register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+}
+
+.register .form-register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(31, 31, 31);
+  width: 500px;
+  padding: 50px 0;
+  border-radius: 15px;
+}
+
+.register .form-register .input-box {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  font-size: 17px;
+  margin: 10px 0;
+}
+
+.register .form-register .input-box .input {
+  color: black;
+  margin-top: 10px;
+  font-size: 17px;
+  padding: 7px;
+}
+
+.register .form-register .submit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  font-size: 17px;
+  margin-top: 20px;
+  padding: 7px;
+  background-color: rgb(111, 9, 27);
+  border: none;
+  color: white;
+}
+
+.register .form-register .button-to-login {
+  display: flex;
+  align-items: center;
+}
+
+.register .form-register .button-to-login p {
+  padding-right: 10px;
+}
+
+.register .form-register .button-to-login .link {
+  color: rgb(255, 30, 63);
+}
